@@ -19,7 +19,7 @@ function serialize(item: any): string {
     return `d:${item};`
   }
   if (type === 'string') {
-    return `s:${getByteLength(item)}:"${item}";`
+    return `s:${item.length}:"${item}";`
   }
   if (type === 'boolean') {
     return `b:${item ? '1' : '0'};`
